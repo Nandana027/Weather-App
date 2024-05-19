@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+<h1>Weather App</h1>
+
+<div class="tab-container">
+    <p class="tab" data-userweather>Your Weather</p>
+    <p class="tab" data-searchweather>Search Weather</p>
+</div>
+
+<div class="weather-container">
+    <!-- grant location -->
+
+    <div class="sub-container grant-location-container">
+        <img src="location.png" alt="" width="80" height="88" loading="lazy">
+        <p>Grant Location Access</p>
+        <p>allow access to get weather information </p>
+        <button class="grant-access" data-grantaccess type="submit">grant access</button>
+    </div>
+
+    <form data-searchforcity class="form-container">
+        <input placeholder="Search for City..." type="text" data-searchInput>
+        <button class="btn1"> 
+            <img src="search.jpg" alt="" width="40" height="40" loading="lazy">
+        </button>
+    </form>
+
+    <!-- loading screen container -->
+    <div class=" sub-container loading-Container">
+        <img src="loading.gif" alt="" width="150" height="150 ">
+        <p>Loading</p>
+    </div>
+    <!-- show weather-info -->
+    <div class="sub-container user-info-container">
+        <div class="name">
+            <p data-cityName></p>
+            <img data-countryicon>
+        </div>
+        <p data-weatherDesc></p>
+        <img data-weatherIcon>
+        <p data-temperature></p>
+        <!-- cards-parameter -->
+        <div class="parameter-container">
+             <!-- card1 -->
+             <div class="parameter">
+                <img src="wind.png " alt="">
+                <p>Wind Speed</p>
+                <p data-windSpeed></p>
+             </div>
+             <!-- card-2 -->
+             <div class="parameter">
+                <img src="humidity.png" alt="">
+                <p>humidity</p>
+                <p data-humidity></p>
+             </div>
+             <!-- card-3 -->
+             <div class="parameter">
+                <img src="cloud.png" alt="">
+                <p>Clouds</p>
+                <p data-Clouds></p>
+             </div>
+             <!-- location not found -->
+
+             <div class="errorContainer subContainer">
+                <img src="not-found.png" data-errorImg />
+                <p data-errorText></p>
+                <button class="btn" data-errorButton>Retry Now</button>
+              </div>
+            
+        </div>
+    </div>
+</div> 
+
+</div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
